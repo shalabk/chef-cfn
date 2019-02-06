@@ -1,8 +1,9 @@
 # Install Chef-Run handlers
 #
-include_recipe 'chef_handler::default'
 
-path = ::File.join(node['chef_handler']['handler_path'], 'cfn_signal.rb')
+path = ::File.join('/var/chef/handler', 'cfn_signal.rb')
+directory path
+
 cookbook_file path do
   source 'chef_handlers/cfn_signal.rb'
   mode '0644'

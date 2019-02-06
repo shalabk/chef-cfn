@@ -8,7 +8,6 @@ issues_url       'https://github.com/JonathanSerafini/chef-cfn/issues'
 source_url       'https://github.com/JonathanSerafini/chef-cfn'
 version          '2.1.1'
 
-depends 'chef_handler'
 depends 'ohai', '>= 4.0.0'
 depends 'python', '>= 1.4.0'
 

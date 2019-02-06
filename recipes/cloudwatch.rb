@@ -1,8 +1,10 @@
 # Install Chef-Run handlers
 #
-include_recipe 'chef_handler::default'
 
-path = ::File.join(node['chef_handler']['handler_path'], 'cloudwatch_event.rb')
+path = ::File.join('/var/chef/handler', 'cloudwatch_event.rb')
+
+directory path
+
 cookbook_file path do
   source 'chef_handlers/cloudwatch_event.rb'
   mode '0644'
